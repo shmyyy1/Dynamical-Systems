@@ -1,3 +1,4 @@
+from example_config import figure_dir, experiment_root, training_epochs
 from importlib import reload
 import numpy as np
 from utils import consensus
@@ -17,7 +18,7 @@ from utils import gnn
 import datetime
 from copy import deepcopy
 
-plt.rc('text', usetex=True)
+plt.rc('text', usetex=False)
 plt.rcParams["font.family"] = "serif"
 plt.rcParams["font.serif"] = ["Times New Roman"] + plt.rcParams["font.serif"]
 plt.rcParams["font.size"] = "12"
@@ -31,10 +32,10 @@ nSamples = 240
 N = 100
 T=10
 step = int(T/0.1)
-fig_fold = '/Users/shamanth/Desktop/Important/Penn/GNN Lab-5/lab5_code_v2/figures_part3/'
+fig_fold = figure_dir(3)
 
 # GNN
-nEpochs = 50  # Number of epochs
+nEpochs = training_epochs()  # Defaults to the original 50 epochs
 batchSize = 20  # Batch size
 learningRate = 0.00025
 beta1 = 0.9
@@ -58,7 +59,7 @@ ref_vel, est_vel, est_vels, biased_vels, accels = simulator.simulate(100, optima
 
 # Plots velocity for 100 agents
 for i in range(0, 100):
-  plt.plot(np.arange(0, int(T),0.1), np.sqrt(est_vels[0,:,0, i]** 2 + est_vels[0,:,0, i]**2))
+  plt.plot(np.arange(0, int(T),0.1), np.linalg.norm(est_vels[0, :, :, i], axis=1))
 
 plt.title(r'Agent velocities $\|\bf{v}_{i,n}\|_2$ for ' + str(N)+ ' agents (centralized controller)')
 plt.xlabel(r'$time (s)$')
@@ -67,6 +68,7 @@ plt.rcParams["figure.figsize"] = (10,6)
 plt.grid()
 plt.savefig(fig_fold+'2-2.png', dpi=300)
 plt.show()
+plt.close()
 
 # Plots average velocity difference between simulations
 results_centralized = np.zeros((10, 100))
@@ -95,10 +97,11 @@ plt.title(r'Average, worst and best magnitude  of $\vec{v}$ for ' + str(N)+ ' ag
 plt.savefig(fig_fold+'centralized.png', dpi=300)
 
 plt.show()
+plt.close()
 
 # %% Training
 thisFilename = 'flockingGNN'
-saveDirRoot = '/Users/shamanth/Desktop/Important/Penn/GNN Lab-5/lab5_code_v2/experiments'
+saveDirRoot = experiment_root(3)
 saveDir = os.path.join(saveDirRoot, thisFilename)
 today = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 saveDir = saveDir + '-%03d-' + today
@@ -164,7 +167,7 @@ cost = simulator.cost(est_vels_valid, biased_vels_valid, accels_valid)
 print("Cost for Q3.1 (GNN):", cost)
 
 for i in range(0, 100, 5):
-  plt.plot(np.arange(0, T, 0.1), np.sqrt(est_vels_valid[0, :, 0, i] ** 2 + est_vels_valid[0, :, 0, i] ** 2))
+  plt.plot(np.arange(0, T, 0.1), np.linalg.norm(est_vels_valid[0, :, :, i], axis=1))
 
 plt.xlabel(r'$time (s)$')
 plt.ylabel(r'$\|{\bf v}_{in}\|_2$')
@@ -178,7 +181,7 @@ results_gnn = np.zeros((10, 100))
 
 for sim in range(10):
   for t in range(100):
-    curr_step = np.sqrt(est_vels_valid[sim, t, 0, :] ** 2 + est_vels[sim, t, 1, :] ** 2)
+    curr_step = np.linalg.norm(est_vels_valid[sim, t, :, :], axis=0)
 
     results_gnn[sim, t] = np.sqrt((curr_step - curr_step.mean()) ** 2).mean()
 

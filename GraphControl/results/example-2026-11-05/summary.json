@@ -1,0 +1,92 @@
+{
+  "started_at_utc": "2026-11-06T00:50:18.586101+00:00",
+  "source_revision": "7d053048fdaba739932afa479299a79d30d4a1a4",
+  "source_note": "Local portability and plotting fixes; see git diff.",
+  "python": "3.13.16",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "torch": "2.14.1"
+  },
+  "epochs": 50,
+  "seed_per_part": 0,
+  "threads": 4,
+  "parts": {
+    "2": {
+      "exit_code": 0,
+      "success": true,
+      "elapsed_seconds": 3.961,
+      "costs": {
+        "Q2.2": 2.5887123614778087,
+        "Q2.4": 133.36148086638485
+      },
+      "figures": [
+        "part2/figures/2-2.png",
+        "part2/figures/2-4-3.png",
+        "part2/figures/centralized.png",
+        "part2/figures/decentralized.png"
+      ],
+      "checkpoints": []
+    },
+    "3": {
+      "exit_code": 0,
+      "success": true,
+      "elapsed_seconds": 208.513,
+      "costs": {
+        "Q3.1 (GNN)": 70.92763603651862
+      },
+      "figures": [
+        "part3/figures/2-2.png",
+        "part3/figures/3.png",
+        "part3/figures/centralized.png",
+        "part3/figures/gnn.png"
+      ],
+      "checkpoints": [
+        "part3/experiments/flockingGNN-%03d-20261105195025/savedModels/LocalGNNArchitBest.ckpt",
+        "part3/experiments/flockingGNN-%03d-20261105195025/savedModels/LocalGNNArchitLast.ckpt",
+        "part3/experiments/flockingGNN-%03d-20261105195025/savedModels/LocalGNNOptimBest.ckpt",
+        "part3/experiments/flockingGNN-%03d-20261105195025/savedModels/LocalGNNOptimLast.ckpt"
+      ]
+    },
+    "4": {
+      "exit_code": 0,
+      "success": true,
+      "elapsed_seconds": 584.55,
+      "costs": {
+        "Q4.1 (GNN)": 79.57695807983836
+      },
+      "figures": [
+        "part4/figures/4_1.png",
+        "part4/figures/gnn_4-1.png"
+      ],
+      "checkpoints": [
+        "part4/experiments/flockingGNN-%03d-20261105195448/savedModels/LocalGNNArchitBest.ckpt",
+        "part4/experiments/flockingGNN-%03d-20261105195448/savedModels/LocalGNNArchitLast.ckpt",
+        "part4/experiments/flockingGNN-%03d-20261105195448/savedModels/LocalGNNOptimBest.ckpt",
+        "part4/experiments/flockingGNN-%03d-20261105195448/savedModels/LocalGNNOptimLast.ckpt"
+      ]
+    },
+    "5": {
+      "exit_code": 0,
+      "success": true,
+      "elapsed_seconds": 622.441,
+      "costs": {
+        "Q5.1 (GNN)": 73.68591860386792
+      },
+      "figures": [
+        "part5/figures/4.png",
+        "part5/figures/gnn_5.png",
+        "part5/figures/positions.png"
+      ],
+      "checkpoints": [
+        "part5/experiments/flockingGNN-%03d-20261105200440/savedModels/LocalGNNArchitBest.ckpt",
+        "part5/experiments/flockingGNN-%03d-20261105200440/savedModels/LocalGNNArchitLast.ckpt",
+        "part5/experiments/flockingGNN-%03d-20261105200440/savedModels/LocalGNNOptimBest.ckpt",
+        "part5/experiments/flockingGNN-%03d-20261105200440/savedModels/LocalGNNOptimLast.ckpt"
+      ]
+    }
+  },
+  "completed_at_utc": "2026-11-06T01:13:58.166149+00:00"
+}

@@ -1,3 +1,4 @@
+from example_config import figure_dir
 from abc import ABC
 import torch
 import numpy as np
@@ -11,13 +12,13 @@ import copy
 import heapq
 rng = np.random
 
-plt.rc('text', usetex=True)
+plt.rc('text', usetex=False)
 plt.rcParams["font.family"] = "serif"
 plt.rcParams["font.serif"] = ["Times New Roman"] + plt.rcParams["font.serif"]
 plt.rcParams["font.size"] = "12"
 
 
-fig_fold='/Users/shamanth/Desktop/Important/Penn/GNN Lab-5/lab5_code_v2/figures_part2'
+fig_fold = figure_dir(2)
 # Parameters
 N=100 # number of agents
 T= 10 # time (s)
@@ -34,7 +35,7 @@ except Exception as e:
 
 # Plots velocity for 100 agents
 for i in range(0, 100):
-  plt.plot(np.arange(0, int(T),0.1), np.sqrt(est_vels[0,:,0, i]** 2 + est_vels[0,:,0, i]**2))
+  plt.plot(np.arange(0, int(T),0.1), np.linalg.norm(est_vels[0, :, :, i], axis=1))
 
 #plt.title(r'Agent velocities $\|\bf{v}_{i,n}\|_2$ for ' + str(N)+ ' agents (centralized controller)')
 plt.xlabel(r'$time (s)$')
@@ -43,6 +44,7 @@ plt.rcParams["figure.figsize"] = (10,6)
 plt.grid()
 plt.savefig(fig_fold+'/2-2.png', dpi=300)
 plt.show()
+plt.close()
 
 # Plots average velocity difference between simulations
 
@@ -89,6 +91,7 @@ plt.title(r'Average, worst and best magnitude  of $\vec{v}$ for ' + str(N)+ ' ag
 plt.savefig(fig_fold+'/centralized.png', dpi=300)
 
 plt.show()
+plt.close()
 
 
 #####################################################################
@@ -111,7 +114,7 @@ controller = cn.DistributedController(com_network, K)
 ref_vel, est_vel, est_vels, biased_vels, accels = simulator.simulate(steps=100, controller=controller)
 print("Cost for Q2.4:", simulator.cost(est_vels, biased_vels, accels))
 for i in range(0, 100, 5):
-  plt.plot(np.arange(0, 10,0.1), np.sqrt(est_vels[0, :, 0, i] ** 2 + est_vels[0, :, 0, i] ** 2))
+  plt.plot(np.arange(0, 10,0.1), np.linalg.norm(est_vels[0, :, :, i], axis=1))
 
 plt.xlabel(r'$time (s)$')
 plt.ylabel(r'$\|\bf{v}_{in}\|_2$')
@@ -120,6 +123,7 @@ plt.title(r'Magnitude of $\|\bf{v}_{i,n}\|_2$ for ' + str(N)+ ' agents (decentra
 plt.grid()
 plt.savefig(fig_fold+'/2-4-3.png', dpi=300)
 plt.show()
+plt.close()
 
 # Plotting average velocity differences
 

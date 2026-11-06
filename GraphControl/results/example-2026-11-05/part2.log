@@ -1,0 +1,11 @@
+# Local absolute paths replaced with repository-relative paths for publication.
+Cost for Q2.2: 2.5887123614778087
+GraphControl\Part2.py:46: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+GraphControl\Part2.py:93: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+Cost for Q2.4: 133.36148086638485
+GraphControl\Part2.py:125: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+GraphControl\Part2.py:155: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()

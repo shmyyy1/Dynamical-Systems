@@ -1,0 +1,73 @@
+# Local absolute paths replaced with repository-relative paths for publication.
+	(E:  1, B:   1) 188.5137 - 8.6728s [VALIDATION]
+	(E:  2, B:   1) 161.3012 - 8.6315s [VALIDATION]
+	=> New best achieved: 161.3012
+	(E:  3, B:   1) 149.1819 - 8.7584s [VALIDATION]
+	=> New best achieved: 149.1819
+	(E:  4, B:   1) 143.0994 - 9.3486s [VALIDATION]
+	=> New best achieved: 143.0994
+	(E:  5, B:   1) 128.3282 - 9.3896s [VALIDATION]
+	=> New best achieved: 128.3282
+	(E:  6, B:   1) 116.8142 - 8.9063s [VALIDATION]
+	=> New best achieved: 116.8142
+	(E:  7, B:   1)  98.7806 - 8.9162s [VALIDATION]
+	=> New best achieved: 98.7806
+	(E:  8, B:   1)  96.0580 - 9.3770s [VALIDATION]
+	=> New best achieved: 96.0580
+	(E:  9, B:   1)  92.7766 - 9.3788s [VALIDATION]
+	=> New best achieved: 92.7766
+	(E: 10, B:   1)  98.9654 - 10.3037s [VALIDATION]
+	(E: 11, B:   1) 108.0978 - 9.9726s [VALIDATION]
+	(E: 12, B:   1)  87.4636 - 9.5973s [VALIDATION]
+	=> New best achieved: 87.4636
+	(E: 13, B:   1)  87.8078 - 9.2387s [VALIDATION]
+	(E: 14, B:   1)  95.5915 - 9.2846s [VALIDATION]
+	(E: 15, B:   1)  84.9329 - 9.2148s [VALIDATION]
+	=> New best achieved: 84.9329
+	(E: 16, B:   1)  87.3736 - 9.9794s [VALIDATION]
+	(E: 17, B:   1)  86.0668 - 9.9098s [VALIDATION]
+	(E: 18, B:   1)  80.8169 - 9.5952s [VALIDATION]
+	=> New best achieved: 80.8169
+	(E: 19, B:   1)  83.4806 - 10.2568s [VALIDATION]
+	(E: 20, B:   1)  86.9723 - 10.0789s [VALIDATION]
+	(E: 21, B:   1)  89.1806 - 9.5160s [VALIDATION]
+	(E: 22, B:   1)  74.2978 - 9.9522s [VALIDATION]
+	=> New best achieved: 74.2978
+	(E: 23, B:   1)  81.8008 - 10.2141s [VALIDATION]
+	(E: 24, B:   1)  82.5296 - 10.6223s [VALIDATION]
+	(E: 25, B:   1)  81.7484 - 10.6173s [VALIDATION]
+	(E: 26, B:   1)  74.5780 - 10.4522s [VALIDATION]
+	(E: 27, B:   1)  89.6546 - 10.3722s [VALIDATION]
+	(E: 28, B:   1)  77.2596 - 9.3755s [VALIDATION]
+	(E: 29, B:   1)  75.4153 - 8.8764s [VALIDATION]
+	(E: 30, B:   1)  81.3057 - 9.4031s [VALIDATION]
+	(E: 31, B:   1)  77.9774 - 9.7763s [VALIDATION]
+	(E: 32, B:   1)  80.5687 - 10.0130s [VALIDATION]
+	(E: 33, B:   1)  70.2197 - 10.4281s [VALIDATION]
+	=> New best achieved: 70.2197
+	(E: 34, B:   1)  70.3381 - 10.0856s [VALIDATION]
+	(E: 35, B:   1)  69.4166 - 8.1501s [VALIDATION]
+	=> New best achieved: 69.4166
+	(E: 36, B:   1)  72.5566 - 8.4146s [VALIDATION]
+	(E: 37, B:   1)  83.5469 - 8.4539s [VALIDATION]
+	(E: 38, B:   1)  68.8485 - 8.3093s [VALIDATION]
+	=> New best achieved: 68.8485
+	(E: 39, B:   1)  68.5349 - 8.8929s [VALIDATION]
+	=> New best achieved: 68.5349
+	(E: 40, B:   1)  69.1107 - 8.5649s [VALIDATION]
+	(E: 41, B:   1)  71.3188 - 8.3981s [VALIDATION]
+	(E: 42, B:   1)  76.4515 - 8.3910s [VALIDATION]
+	(E: 43, B:   1)  74.7423 - 8.3640s [VALIDATION]
+	(E: 44, B:   1)  81.3657 - 8.7130s [VALIDATION]
+	(E: 45, B:   1)  75.2976 - 8.3127s [VALIDATION]
+	(E: 46, B:   1)  78.1839 - 8.4802s [VALIDATION]
+	(E: 47, B:   1)  77.7745 - 8.4946s [VALIDATION]
+	(E: 48, B:   1)  63.7377 - 8.3025s [VALIDATION]
+	=> New best achieved: 63.7377
+	(E: 49, B:   1)  76.1274 - 8.3555s [VALIDATION]
+	(E: 50, B:   1)  67.2406 - 8.3867s [VALIDATION]
+	=> Best validation achieved (E: 48, B: 1): 63.7377
+Cost for Q5.1 (GNN): 73.68591860386792
+(20, 100, 2, 100)
+GraphControl\Part5.py:161: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()

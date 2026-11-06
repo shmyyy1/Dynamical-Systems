@@ -1,3 +1,4 @@
+from example_config import figure_dir, experiment_root, training_epochs
 from importlib import reload
 import numpy as np
 from utils import consensus
@@ -16,7 +17,7 @@ from utils import gnnPart4 as gnn
 import datetime
 from copy import deepcopy
 
-plt.rc('text', usetex=True)
+plt.rc('text', usetex=False)
 plt.rcParams["font.family"] = "serif"
 plt.rcParams["font.serif"] = ["Times New Roman"] + plt.rcParams["font.serif"]
 plt.rcParams["font.size"] = "12"
@@ -30,7 +31,7 @@ N = 100
 T=10
 step = int(T/0.1)
 
-fig_fold = '/Users/shamanth/Desktop/Important/Penn/GNN Lab-5/lab5_code_v2/figures_part4/'
+fig_fold = figure_dir(4)
 network = np.zeros((nSamples, N, N))
 com_network = np.zeros((nSamples, step, N, N))
 
@@ -49,7 +50,7 @@ networkss, positions, ref_vel, est_vel, est_vels, biased_vels, accels = simulato
 
 # %% Training
 thisFilename = 'flockingGNN'
-saveDirRoot = 'experiments'
+saveDirRoot = experiment_root(4)
 saveDir = os.path.join(saveDirRoot, thisFilename)
 today = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 saveDir = saveDir + '-%03d-' + today
@@ -63,7 +64,7 @@ torchSeed = torch.initial_seed()
 #   Numpy seeds
 numpyState = np.random.RandomState().get_state()
 
-nEpochs = 50  # Number of epochs
+nEpochs = training_epochs()  # Defaults to the original 50 epochs
 batchSize = 20  # Batch size
 learningRate = 0.00025
 beta1 = 0.9
@@ -113,12 +114,12 @@ pos_test = positions[200:220]
 _, _, est_vels_valid, biased_vels_valid, accels_valid = simulator.computeTrajectory_pos(GraphNNs.archit, pos_test,
                                                                                         ref_vel_test, est_vel_test, 100)
 cost = simulator.cost(est_vels_valid, biased_vels_valid, accels_valid)
-print(cost)
+print("Cost for Q4.1 (GNN):", cost)
 print(np.shape(est_vels))
 
 #%% Plotting
 for i in range(0, 20):
-  plt.plot(np.arange(0, T, 0.1), np.sqrt(est_vels_valid[0, :, 0, i] ** 2 + est_vels_valid[0, :, 0, i] ** 2))
+  plt.plot(np.arange(0, T, 0.1), np.linalg.norm(est_vels_valid[0, :, :, i], axis=1))
 
 plt.xlabel(r'$time (s)$')
 plt.ylabel(r'$\|{\bf v}_{in}\|_2$')

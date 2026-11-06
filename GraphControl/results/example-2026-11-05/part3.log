@@ -1,0 +1,86 @@
+# Local absolute paths replaced with repository-relative paths for publication.
+GraphControl\Part3.py:70: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+GraphControl\Part3.py:99: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+DEBUG: Current working directory: GraphControl
+DEBUG: saveDir (relative): GraphControl\results\example-2026-11-05\part3\experiments\flockingGNN-%03d-20261105195025
+DEBUG: saveDir (absolute): GraphControl\results\example-2026-11-05\part3\experiments\flockingGNN-%03d-20261105195025
+Model will be saved to: GraphControl\results\example-2026-11-05\part3\experiments\flockingGNN-%03d-20261105195025
+Starting training for 50 epochs with batch size 20
+	(E:  1, B:   1) 585.1471 - 3.0548s [VALIDATION]
+	(E:  2, B:   1) 455.2351 - 3.0869s [VALIDATION]
+	=> New best achieved: 455.2351
+	(E:  3, B:   1) 349.4013 - 2.8540s [VALIDATION]
+	=> New best achieved: 349.4013
+	(E:  4, B:   1) 278.7225 - 2.5507s [VALIDATION]
+	=> New best achieved: 278.7225
+	(E:  5, B:   1) 230.7124 - 2.6359s [VALIDATION]
+	=> New best achieved: 230.7124
+	(E:  6, B:   1) 196.6069 - 3.3171s [VALIDATION]
+	=> New best achieved: 196.6069
+	(E:  7, B:   1) 194.9572 - 3.0025s [VALIDATION]
+	=> New best achieved: 194.9572
+	(E:  8, B:   1) 179.6952 - 2.5060s [VALIDATION]
+	=> New best achieved: 179.6952
+	(E:  9, B:   1) 171.8515 - 2.3608s [VALIDATION]
+	=> New best achieved: 171.8515
+	(E: 10, B:   1) 172.0465 - 2.5399s [VALIDATION]
+	(E: 11, B:   1) 165.7755 - 2.3613s [VALIDATION]
+	=> New best achieved: 165.7755
+	(E: 12, B:   1) 152.0731 - 2.6888s [VALIDATION]
+	=> New best achieved: 152.0731
+	(E: 13, B:   1) 145.7688 - 2.8855s [VALIDATION]
+	=> New best achieved: 145.7688
+	(E: 14, B:   1) 145.6308 - 2.6341s [VALIDATION]
+	=> New best achieved: 145.6308
+	(E: 15, B:   1) 146.3417 - 2.5213s [VALIDATION]
+	(E: 16, B:   1) 151.6675 - 2.4943s [VALIDATION]
+	(E: 17, B:   1) 141.2955 - 2.4492s [VALIDATION]
+	=> New best achieved: 141.2955
+	(E: 18, B:   1) 117.5508 - 2.7292s [VALIDATION]
+	=> New best achieved: 117.5508
+	(E: 19, B:   1) 124.5988 - 3.2988s [VALIDATION]
+	(E: 20, B:   1) 118.4732 - 2.5864s [VALIDATION]
+	(E: 21, B:   1) 116.6435 - 2.4869s [VALIDATION]
+	=> New best achieved: 116.6435
+	(E: 22, B:   1) 112.4714 - 2.5243s [VALIDATION]
+	=> New best achieved: 112.4714
+	(E: 23, B:   1)  97.0964 - 3.0483s [VALIDATION]
+	=> New best achieved: 97.0964
+	(E: 24, B:   1) 103.3535 - 3.0241s [VALIDATION]
+	(E: 25, B:   1) 103.6101 - 2.8797s [VALIDATION]
+	(E: 26, B:   1) 110.4697 - 2.6493s [VALIDATION]
+	(E: 27, B:   1)  96.3921 - 2.7400s [VALIDATION]
+	=> New best achieved: 96.3921
+	(E: 28, B:   1)  79.4963 - 3.4067s [VALIDATION]
+	=> New best achieved: 79.4963
+	(E: 29, B:   1)  98.5722 - 2.9752s [VALIDATION]
+	(E: 30, B:   1)  89.4712 - 2.6326s [VALIDATION]
+	(E: 31, B:   1)  85.0699 - 3.0705s [VALIDATION]
+	(E: 32, B:   1)  92.3589 - 2.6067s [VALIDATION]
+	(E: 33, B:   1) 100.7235 - 2.3962s [VALIDATION]
+	(E: 34, B:   1)  80.7575 - 2.4091s [VALIDATION]
+	(E: 35, B:   1)  97.5758 - 2.4777s [VALIDATION]
+	(E: 36, B:   1)  84.3709 - 2.3863s [VALIDATION]
+	(E: 37, B:   1)  84.9591 - 2.4044s [VALIDATION]
+	(E: 38, B:   1)  81.4167 - 2.4227s [VALIDATION]
+	(E: 39, B:   1)  73.3824 - 2.4743s [VALIDATION]
+	=> New best achieved: 73.3824
+	(E: 40, B:   1)  77.9074 - 2.5096s [VALIDATION]
+	(E: 41, B:   1)  84.2387 - 2.4097s [VALIDATION]
+	(E: 42, B:   1)  81.9009 - 2.4200s [VALIDATION]
+	(E: 43, B:   1)  93.4272 - 2.3372s [VALIDATION]
+	(E: 44, B:   1)  74.5708 - 2.5649s [VALIDATION]
+	(E: 45, B:   1)  82.3562 - 2.4397s [VALIDATION]
+	(E: 46, B:   1)  76.4690 - 2.4087s [VALIDATION]
+	(E: 47, B:   1)  94.4666 - 2.3344s [VALIDATION]
+	(E: 48, B:   1)  71.3895 - 2.4470s [VALIDATION]
+	=> New best achieved: 71.3895
+	(E: 49, B:   1)  82.8649 - 2.6454s [VALIDATION]
+	(E: 50, B:   1)  79.1034 - 2.4828s [VALIDATION]
+	=> Best validation achieved (E: 48, B: 1): 71.3895
+Training complete! Check for saved models in: GraphControl\results\example-2026-11-05\part3\experiments\flockingGNN-%03d-20261105195025\savedModels
+Cost for Q3.1 (GNN): 70.92763603651862
+GraphControl\Part3.py:205: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
