@@ -23,4 +23,4 @@ One CPU run (November 5, 2026; seed 0; 50 epochs):
 
 [Example trajectory](results/example-2026-11-05/part5/figures/positions.png) · [Run details](results/example-2026-11-05/summary.json). Costs combine velocity error and control effort on separate random rollouts; collision safety is not scored.
 
-Includes portable paths and corrected speed plots. `lab5.py` is an incomplete fragment.
+Includes portable paths and corrected speed plots.
